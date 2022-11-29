@@ -12,10 +12,15 @@ endif
 ### COMPILER ###
 COMP=gcc
 
-#SOURCE FILE
-SRC=src/main.c src/init.h src/game.h src/resources.h
+### DEPENDENCIES ###
 
-$(TARGET): $(SRC) Makefile
+DEPGUI=src/gui/gui.c src/gui/gui.h
+DEPENDS=src/init.h src/game.h src/resources.h $(DEPGUI)
+
+### SOURCE FILE ###
+SRC=src/main.c 
+
+$(TARGET): $(SRC) $(DEPENDS) Makefile
 	$(CC) $< -o $@ $(CFLAGS)
 
 build: $(TARGET)
