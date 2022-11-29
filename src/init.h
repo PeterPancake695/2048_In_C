@@ -1,6 +1,7 @@
 #pragma once
 #include "game.h"
 #include "resources.h"
+#include "gui/gui.c"
 
 void init(){
     srand(time(NULL));

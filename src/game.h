@@ -1,5 +1,7 @@
 #pragma once
+#define RAYGUI_IMPLEMENTATION
 #include "../include/raylib.h"
+#include "../include/raygui.h"
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
