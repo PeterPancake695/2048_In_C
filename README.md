@@ -15,14 +15,14 @@
 > Windows & mingw32:
 
 ```powershell
-    # in root
+    # in root directory
     mingw32-make.exe
 ```
 
 > linux / mac:
 
 ```bash
-    # in root
+    # in root directory
     make
 ```
 
