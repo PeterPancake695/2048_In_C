@@ -1,2 +1,33 @@
-# 2048_In_C
-A remake of the popular game 2048 but written in the C programing language.
+<p align=center>
+    <img src="https://www.2048tile.co/og_image.png" alt="2048.png" height="100">
+    <h1 align=center>2048 in C</h1>
+</p>
+
+## Why C?
+
+- ❤️ **Because it's my favorite programing language**
+- 🚀 **It's Fast**
+- 💎 **It's Reliable**
+- ⬇️ **It's Low Level**
+
+## How To Compile?
+
+> Windows & mingw32:
+
+```powershell
+    # in root
+    mingw32-make.exe
+```
+
+> linux / mac:
+
+```bash
+    # in root
+    make
+```
+
+## Why did I make this?
+
+For fun (_mostly_)
+
+I did to challenge myself and to improve my coding skills
