@@ -1,5 +1,5 @@
 ### COMPILATION FLAGS ###
-CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/ -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows -g
+CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/ -lraylib -lopengl32 -lgdi32 -lwinmm -g
 
 ### TARGET ###
 TARGET=2048InC
@@ -15,7 +15,7 @@ COMP=gcc
 #SOURCE FILE
 SRC=src/main.c src/init.h src/game.h src/resources.h
 
-$(TARGET): $(SRC) 
+$(TARGET): $(SRC) Makefile
 	$(CC) $< -o $@ $(CFLAGS)
 
 build: $(TARGET)
