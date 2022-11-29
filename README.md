@@ -31,3 +31,7 @@
 For fun (_mostly_)
 
 I did to challenge myself and to improve my coding skills
+
+## ‼️ NOTICE
+
+For the game to run, the res folder must be in the same directory as the executable
