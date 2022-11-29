@@ -13,7 +13,7 @@ endif
 COMP=gcc
 
 #SOURCE FILE
-SRC=src/main.c
+SRC=src/main.c src/init.h src/game.h src/resources.h
 
 $(TARGET): $(SRC) 
 	$(CC) $< -o $@ $(CFLAGS)
