@@ -28,5 +28,7 @@ build: $(TARGET)
 run: build
 	./$(TARGET)
 
+.PHONY=clean
+
 clean:
 	rm $(TARGET)

@@ -11,8 +11,8 @@
 #ifndef __GAME_H_
 #define __GAME_H_
 
-const unsigned int window_height = 720;
-const unsigned int window_width = 720;
+const short unsigned int window_height = 720;
+const short unsigned int window_width = 720;
 const char window_title[10] = "2048 In C";
 
 #endif
