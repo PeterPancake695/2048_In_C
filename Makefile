@@ -10,7 +10,7 @@ ifeq ($(OS), Windows_NT)
 endif
 
 ### COMPILER ###
-COMP=gcc
+CC=gcc
 
 ### DEPENDENCIES ###
 
@@ -27,6 +27,7 @@ build: $(TARGET)
 
 run: build
 	./$(TARGET)
+
 
 .PHONY=clean
 
