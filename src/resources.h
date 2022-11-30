@@ -1,6 +1,7 @@
 #pragma once
 #include "game.h"
 
+
 // Required Resources
 struct Resources{
     // Game Textures
@@ -33,11 +34,17 @@ struct Resources{
         struct Misc{
             Texture2D transparent;
             Image icon;
+            Texture2D PeterPancake666;
         }misc;
+
+        // Gui textures
+        struct Gui{
+            Texture2D logo;
+        }gui;
     }textures;
 
     struct Fonts{
-        Font arial;
+        Font roboto;
     }fonts;
 }resources;
 
@@ -92,22 +99,36 @@ void resource_texture_game_unload(){
 void resource_texture_misc_load(){
     resources.textures.misc.transparent = LoadTexture("res/textures/misc/transparent.png");
     resources.textures.misc.icon = LoadImage("res/textures/misc/icon.png");
+    resources.textures.misc.PeterPancake666 = LoadTexture("res/textures/misc/PeterPancake666.png");
 }
 
 // Unloads miscellaneous textures
 void resource_texture_misc_unload(){
     UnloadTexture(resources.textures.misc.transparent);
     UnloadImage(resources.textures.misc.icon);
+    UnloadTexture(resources.textures.misc.PeterPancake666);
+}
+
+// Loads gui textures
+
+void resource_texture_gui_load(){
+    resources.textures.gui.logo = LoadTexture("res/textures/gui/logo.png");
+}
+
+// Unloads gui textures
+
+void resource_texture_gui_unload(){
+    UnloadTexture(resources.textures.gui.logo);
 }
 
 // Loads fonts
 void resource_font_load(){
-    resources.fonts.arial = LoadFont("res/fonts/arial.ttf");
+    resources.fonts.roboto = LoadFont("res/fonts/Roboto-Black.ttf");
 }
 
 // Unloads fonts
 void resource_font_unload(){
-    UnloadFont(resources.fonts.arial);
+    UnloadFont(resources.fonts.roboto);
 }
 
 // Loads all textures
@@ -115,6 +136,7 @@ void resource_texture_load(){
     resource_texture_misc_load();
     resource_texture_game_load();
     resource_texture_tile_load();
+    resource_texture_gui_load();
 }
 
 // Unloads all textures
@@ -122,6 +144,7 @@ void resource_texture_unload(){
     resource_texture_misc_unload();
     resource_texture_game_unload();
     resource_texture_tile_unload();
+    resource_texture_gui_unload();
 }
 
 // Loads all resources
