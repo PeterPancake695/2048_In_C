@@ -14,8 +14,8 @@ COMP=gcc
 
 ### DEPENDENCIES ###
 
-DEPGUI=src/gui/gui.c src/gui/gui.h
-DEPENDS=src/init.h src/game.h src/resources.h $(DEPGUI)
+DEPGUI=src/gui/gui.c src/gui/gui.h src/gui/menu.c
+DEPENDS=src/init.h src/game.h src/resources.h src/intro.h $(DEPGUI)
 
 ### SOURCE FILE ###
 SRC=src/main.c 
