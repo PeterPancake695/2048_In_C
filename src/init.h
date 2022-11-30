@@ -16,7 +16,12 @@ void init(){
         ClearBackground((Color){244, 226, 198, 255});
         DrawFPS(0,0);
         if(intro()){
-            gui_menu_logo();
+            if(menu_pressed_play){
+                
+            }
+            else{
+                gui_menu();
+            }
         }
         EndDrawing();
     }

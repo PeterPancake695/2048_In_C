@@ -40,6 +40,12 @@ struct Resources{
         // Gui textures
         struct Gui{
             Texture2D logo;
+            Texture2D exit_clicked;
+            Texture2D exit_hover;
+            Texture2D exit_normal;
+            Texture2D play_clicked;
+            Texture2D play_hover;
+            Texture2D play_normal;
         }gui;
     }textures;
 
@@ -113,12 +119,24 @@ void resource_texture_misc_unload(){
 
 void resource_texture_gui_load(){
     resources.textures.gui.logo = LoadTexture("res/textures/gui/logo.png");
+    resources.textures.gui.exit_clicked = LoadTexture("res/textures/gui/exit-clicked.png");
+    resources.textures.gui.exit_hover = LoadTexture("res/textures/gui/exit-hover.png");
+    resources.textures.gui.exit_normal = LoadTexture("res/textures/gui/exit-normal.png");
+    resources.textures.gui.play_clicked = LoadTexture("res/textures/gui/play-clicked.png");
+    resources.textures.gui.play_hover = LoadTexture("res/textures/gui/play-hover.png");
+    resources.textures.gui.play_normal = LoadTexture("res/textures/gui/play-normal.png");
 }
 
 // Unloads gui textures
 
 void resource_texture_gui_unload(){
     UnloadTexture(resources.textures.gui.logo);
+    UnloadTexture(resources.textures.gui.exit_clicked);
+    UnloadTexture(resources.textures.gui.exit_hover); 
+    UnloadTexture(resources.textures.gui.exit_normal );
+    UnloadTexture(resources.textures.gui.play_clicked);
+    UnloadTexture(resources.textures.gui.play_hover);
+    UnloadTexture(resources.textures.gui.play_normal );
 }
 
 // Loads fonts
