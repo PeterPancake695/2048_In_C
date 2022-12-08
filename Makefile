@@ -14,8 +14,9 @@ CC=gcc
 
 ### DEPENDENCIES ###
 
+DEPGAME=src/game/game.c src/game/game.h src/game/move.h src/game/random.h src/game/table.h
 DEPGUI=src/gui/gui.c src/gui/gui.h src/gui/menu.c
-DEPENDS=src/init.h src/game.h src/resources.h src/intro.h $(DEPGUI)
+DEPENDS=src/init.h src/resources.h src/intro.h $(DEPGUI) $(DEPGAME)
 
 ### SOURCE FILE ###
 SRC=src/main.c 
