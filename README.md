@@ -30,4 +30,4 @@
 
 For fun (_mostly_)
 
-I did this project to challenge myself and to improve my coding skills
+I did to challenge myself and to improve my coding skills
