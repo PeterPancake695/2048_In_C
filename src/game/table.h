@@ -1,7 +1,5 @@
 #include "game.h"
 
-short int tiles[4][4];
-
 void printTable(){
     int i, j;
     for(i = 0; i <= 3; i++){

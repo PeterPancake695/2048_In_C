@@ -1,16 +1,6 @@
 #pragma once
 #include "move.h"
 
-void newGame(){
-    for(int i = 0; i <= 3; i++){
-        for(int j = 0; j <= 3; j++){
-            tiles[i][j] = 0;
-        }
-    }
-    random();
-    random();
-}
-
 void keyPress(){
     if(IsKeyPressed(KEY_UP)){
         move(2);
@@ -28,6 +18,10 @@ void keyPress(){
 
 void initGame(){
     drawTilePad();
-    keyPress();
+    if(gameLost == 0 && gameWon == 0){
+        keyPress();
+    }
 	printTable();
+    LoseCheck();
+    WinCheck();
 }
