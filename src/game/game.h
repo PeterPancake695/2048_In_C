@@ -11,7 +11,7 @@ bool gameLost = false;
 
 short int tiles[4][4];
 
-void random(){
+void generate(){
     int i = rand() % 4;
     int j = rand() % 4;
     while (tiles[i][j] > 0){
@@ -27,6 +27,6 @@ void newGame(){
             tiles[i][j] = 0;
         }
     }
-    random();
-    random();
+    generate();
+    generate();
 }
