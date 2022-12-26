@@ -1,10 +1,21 @@
 ### COMPILATION FLAGS ###
-CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/ -lraylib -lopengl32 -lgdi32 -lwinmm -g
+
+# WINDOWS FLAGS #
+
+ifeq ($(OS), Windows_NT)
+	CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/windows -lraylib -lopengl32 -lgdi32 -lwinmm -g
+endif
+
+# LINUX FLAGS
+
+ifeq ($(OS), LINUX)
+	CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include. -L ./lib/linux -lraylib -lGL -lm -ldl -lrt -lX11
+endif
 
 ### TARGET ###
 TARGET=2048InC
 
-# WINDOWS TARGET
+# WINDOWS TARGET #
 ifeq ($(OS), Windows_NT)
 	TARGET=2048InC.exe
 endif
@@ -14,7 +25,7 @@ CC=gcc
 
 ### DEPENDENCIES ###
 
-DEPGAME=src/game/game.c src/game/game.h src/game/move.h src/game/random.h src/game/table.h src/game/winlose.h
+DEPGAME=src/game/game.c src/game/game.h src/game/move.h src/game/table.h src/game/winlose.h
 DEPGUI=src/gui/gui.c src/gui/gui.h src/gui/menu.c
 DEPENDS=src/init.h src/resources.h src/intro.h $(DEPGUI) $(DEPGAME)
 

@@ -59,6 +59,6 @@ void move(int dir){
         }
     }
     if(canRandom){
-        random();
+        generate();
     }
 }
