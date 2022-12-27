@@ -22,6 +22,7 @@ void initGame(){
         keyPress();
     }
 	printTable();
+	game_draw_score();
     LoseCheck();
     WinCheck();
 }
