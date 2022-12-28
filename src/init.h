@@ -14,7 +14,6 @@ void init(){
     while (!WindowShouldClose()){
         BeginDrawing();
         ClearBackground((Color){244, 226, 198, 255});
-        DrawFPS(0,0);
         if(intro()){
             if(menu_pressed_play){
                 initGame();
