@@ -3,7 +3,7 @@
 CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include. -L ./lib/linux -lraylib -lGL -lm -ldl -lrt -lX11
 
 ifeq ($(OS), Windows_NT)
-	CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/windows -lraylib -lopengl32 -lgdi32 -lwinmm -g
+	CFLAGS=-O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/windows -lraylib -lopengl32 -lgdi32 -lwinmm -g -mwindows
 endif
 
 ### TARGET ###
