@@ -18,11 +18,17 @@ void keyPress(){
 
 void initGame(){
     drawTilePad();
-    if(gameLost == 0 && gameWon == 0){
-        keyPress();
-    }
 	printTable();
 	game_draw_score();
+	if(gameLost == false && gameWon == false){
+		if(gamePaused == false){
+			keyPress();	
+		}
+		else{
+			gui_game_pause_draw();
+		}
+		gui_game_pause_input();
+	}
     LoseCheck();
     WinCheck();
 }

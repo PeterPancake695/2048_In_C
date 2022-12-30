@@ -1,4 +1,4 @@
-#include "score.h"
+#include "pause.h"
 
 void move(int dir){
     int startLine = 0, startColumn = 0, lineStep = 1, columnStep = 1, i2, j2, score_gained = 0;
