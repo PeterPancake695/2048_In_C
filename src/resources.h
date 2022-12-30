@@ -46,6 +46,9 @@ struct Resources{
             Texture2D play_clicked;
             Texture2D play_hover;
             Texture2D play_normal;
+			Texture2D pause_clicked;
+			Texture2D pause_hover;
+			Texture2D pause_normal;
         }gui;
     }textures;
 
@@ -125,6 +128,9 @@ void resource_texture_gui_load(){
     resources.textures.gui.play_clicked = LoadTexture("res/textures/gui/play-clicked.png");
     resources.textures.gui.play_hover = LoadTexture("res/textures/gui/play-hover.png");
     resources.textures.gui.play_normal = LoadTexture("res/textures/gui/play-normal.png");
+	resources.textures.gui.pause_clicked = LoadTexture("res/textures/gui/pause-clicked.png");
+	resources.textures.gui.pause_hover = LoadTexture("res/textures/gui/pause-hover.png");
+	resources.textures.gui.pause_normal = LoadTexture("res/textures/gui/pause-normal.png");
 }
 
 // Unloads gui textures
@@ -136,7 +142,10 @@ void resource_texture_gui_unload(){
     UnloadTexture(resources.textures.gui.exit_normal );
     UnloadTexture(resources.textures.gui.play_clicked);
     UnloadTexture(resources.textures.gui.play_hover);
-    UnloadTexture(resources.textures.gui.play_normal );
+    UnloadTexture(resources.textures.gui.play_normal);
+	UnloadTexture(resources.textures.gui.pause_clicked);
+	UnloadTexture(resources.textures.gui.pause_hover);
+	UnloadTexture(resources.textures.gui.pause_normal);
 }
 
 // Loads fonts
