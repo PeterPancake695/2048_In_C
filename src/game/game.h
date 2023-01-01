@@ -4,8 +4,8 @@
 short int dirLine[4] = {1, 0, -1, 0};
 short int dirColumn[4] = {0, 1, 0, -1};
 
-float wincolor = 0;//{0, 232, 31, 0};
-float losecolor = 0;//{235, 0, 0, 0};
+float wincolor = 0;
+float losecolor = 0;
 
 bool gameWon = false;
 bool gameLost = false;

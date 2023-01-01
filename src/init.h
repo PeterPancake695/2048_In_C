@@ -19,11 +19,14 @@ void init(){
     InitWindow(window_width, window_height, window_title);
     SetTargetFPS(60);
     SetExitKey(KEY_NULL);
+	InitAudioDevice();
     resource_all_load();
     SetWindowIcon(resources.textures.misc.icon);
+	PlayMusicStream(resources.music);
     while (!WindowShouldClose()){
         BeginDrawing();
         ClearBackground((Color){244, 226, 198, 255});
+		UpdateMusicStream(resources.music);
         if(intro()){
             if(menu_pressed_play){
                 initGame();
