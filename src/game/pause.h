@@ -1,9 +1,11 @@
 #include "score.h"
 
+// initializes variables
 bool gamePaused = false;
 bool game_pressed_pause = false;
 bool game_pressed_pause_hold = false;
 
+// draws pause button and makes it use-able
 void gui_game_pause_button(){
 	if(10 <= GetMouseX() && GetMouseX() <= 110 && 60 <= GetMouseY() && GetMouseY() <= 160){
         if(IsMouseButtonDown(MOUSE_BUTTON_LEFT)){
@@ -23,6 +25,7 @@ void gui_game_pause_button(){
 
 }
 
+// draws pause menu
 void gui_game_pause_draw(){
 	DrawRectangle(0,0,720,720, (Color){0, 0, 0, 175});
 	DrawTextEx(resources.fonts.roboto, "Game paused", (Vector2){120, 250}, 90, 5, BLACK);
@@ -36,6 +39,7 @@ void gui_game_pause_draw(){
 	}
 }
 
+// checks if escape is pressed and pauses the game
 void gui_game_pause_input(){
 	if(IsKeyPressed(KEY_ESCAPE)){
 		gamePaused--;

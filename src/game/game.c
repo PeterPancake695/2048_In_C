@@ -1,6 +1,7 @@
 #pragma once
 #include "move.h"
 
+// checks for keys being pressed
 void keyPress(){
     if(IsKeyPressed(KEY_UP)){
         move(2);
@@ -16,6 +17,7 @@ void keyPress(){
     }
 }
 
+// initializes the game-play
 void initGame(){
     drawTilePad();
 	printTable();
