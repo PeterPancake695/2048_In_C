@@ -1,5 +1,6 @@
 #include "pause.h"
 
+// moves in one direction
 void move(int dir){
     int startLine = 0, startColumn = 0, lineStep = 1, columnStep = 1, i2, j2, score_gained = 0;
     if(dir == 0){
