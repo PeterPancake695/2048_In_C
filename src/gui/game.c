@@ -1,7 +1,5 @@
 #include "gui.h"
 
-int score = 0;
-
 void gui_game_play_button(){
     if(285 <= GetMouseX() && GetMouseX() <= 435 && 400 <= GetMouseY() && GetMouseY() <= 500){
         if(IsMouseButtonDown(MOUSE_BUTTON_LEFT)){

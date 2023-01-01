@@ -9,8 +9,6 @@ float losecolor = 0;//{235, 0, 0, 0};
 bool gameWon = false;
 bool gameLost = false;
 
-short int tiles[4][4];
-
 void generate(){
     int i = rand() % 4;
     int j = rand() % 4;
@@ -22,6 +20,7 @@ void generate(){
 }
 
 void newGame(){
+	score = 0;
     for(int i = 0; i <= 3; i++){
         for(int j = 0; j <= 3; j++){
             tiles[i][j] = 0;

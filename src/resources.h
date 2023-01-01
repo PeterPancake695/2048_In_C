@@ -51,7 +51,7 @@ struct Resources{
 			Texture2D pause_normal;
         }gui;
     }textures;
-
+	// fonts
     struct Fonts{
         Font roboto;
     }fonts;
