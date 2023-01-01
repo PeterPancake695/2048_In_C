@@ -22,6 +22,7 @@ void gui_menu_exit_button(){
             menu_pressed_exit = true;
         }
         else if(menu_pressed_exit){
+			exit_game();
             exit(0);
         }
         else{

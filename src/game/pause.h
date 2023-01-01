@@ -11,8 +11,7 @@ void gui_game_pause_button(){
             game_pressed_pause_hold = true;
         }
         else if(game_pressed_pause_hold){
-            game_pressed_pause = true;
-            score = 0;	
+            game_pressed_pause = true;	
         }
         else{
             DrawTexturePro(resources.textures.gui.pause_hover, (Rectangle){0, 0, 20, 20}, (Rectangle){10, 60, 100, 100}, (Vector2){0,0}, 0, WHITE);
