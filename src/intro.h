@@ -1,10 +1,12 @@
 #include "resources.h"
 
+// initializes variables
 bool intro_finished_init = false;
 bool intro_finished_wait = false;
 bool intro_finished_final = false;
 double intro_opacity = 0;
 
+// initial intro sequence
 void intro_init(){
     DrawTextureEx(resources.textures.misc.PeterPancake666, (Vector2){180,100}, 0, 0.5, (Color){255, 255, 255, intro_opacity});
     DrawTextEx(resources.fonts.roboto, "Made by PeterPancake666", (Vector2){155, 475}, 30, 5, (Color){255, 255, 255, intro_opacity});
@@ -18,6 +20,7 @@ void intro_init(){
     }
 }
 
+// second intro sequence
 void intro_wait(){
     DrawTextureEx(resources.textures.misc.PeterPancake666, (Vector2){180,100}, 0, 0.5, WHITE);
     DrawTextEx(resources.fonts.roboto, "Made by PeterPancake666", (Vector2){155, 475}, 30, 5, WHITE);
@@ -27,6 +30,7 @@ void intro_wait(){
     }
 }
 
+// final intro sequence
 void intro_final(){
     DrawTextureEx(resources.textures.misc.PeterPancake666, (Vector2){180,100}, 0, 0.5, (Color){255, 255, 255, intro_opacity});
     DrawTextEx(resources.fonts.roboto, "Made by PeterPancake666", (Vector2){155, 475}, 30, 5, (Color){255, 255, 255, intro_opacity});
@@ -40,6 +44,7 @@ void intro_final(){
     }
 }
 
+// initializes intro sequence
 int intro(){
     if(intro_finished_init && intro_finished_wait && intro_finished_final){
         return 1;

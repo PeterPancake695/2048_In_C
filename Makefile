@@ -21,7 +21,7 @@ CC=gcc
 
 DEPGAME=src/game/game.c src/game/game.h src/game/move.h src/game/table.h src/game/winlose.h src/game/score.h src/game/pause.h
 DEPGUI=src/gui/gui.c src/gui/gui.h src/gui/menu.c
-DEPENDS=src/init.h src/resources.h src/intro.h $(DEPGUI) $(DEPGAME)
+DEPENDS=src/init.h src/resources.h src/intro.h src/game.h $(DEPGUI) $(DEPGAME)
 
 ### SOURCE FILE ###
 SRC=src/main.c 

@@ -1,5 +1,6 @@
 #include "game.h"
 
+// draws tiles 
 void printTable(){
     int i, j;
     for(i = 0; i <= 3; i++){
@@ -52,6 +53,7 @@ void printTable(){
     }
 }
 
+// draws the tile backround
 void drawTilePad(){
     DrawTextureEx(resources.textures.game.back, (Vector2){120, 120}, 0, 2, WHITE);
 }
