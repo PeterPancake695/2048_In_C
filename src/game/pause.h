@@ -13,6 +13,7 @@ void gui_game_pause_button(){
             game_pressed_pause_hold = true;
         }
         else if(game_pressed_pause_hold){
+			PlaySound(resources.sounds.press);
             game_pressed_pause = true;	
         }
         else{

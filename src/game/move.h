@@ -58,7 +58,7 @@ void move(int dir){
                 j2 = j + dirColumn[dir];
                 if(canMove(i, j, i2, j2)){
 					if(tiles[i][j] != 0 && tiles[i2][j2] != 0){
-						score_gained += tiles[i][j]*2;
+							score_gained += tiles[i][j]*2;
 					}
                     tiles[i2][j2] += tiles[i][j];
 					tiles[i][j] = 0;
@@ -72,4 +72,10 @@ void move(int dir){
     if(canRandom){
         generate();
     }
+	if(score_gained != 0){
+		PlaySound(resources.sounds.merge);
+	}
+	else{
+		PlaySound(resources.sounds.move);
+	}
 }

@@ -8,6 +8,7 @@ void gui_game_play_button(){
             game_pressed_play_hold = true;
         }
         else if(game_pressed_play_hold){
+			PlaySound(resources.sounds.press);
             game_pressed_play = true;
         }
         else{

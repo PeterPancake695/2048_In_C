@@ -8,7 +8,7 @@ void gui_menu_logo_rotation(){
     if(menu_rotation >= 10){
         menu_rotation_negative = -1;
     }
-    menu_rotation += 1.0/GetFPS()*30.0*(float)menu_rotation_negative;
+    menu_rotation += 1.0/GetFPS()*5.0*(float)menu_rotation_negative;
 }
 
 // draws logo
@@ -25,6 +25,8 @@ void gui_menu_exit_button(){
             menu_pressed_exit = true;
         }
         else if(menu_pressed_exit){
+			PlaySound(resources.sounds.press);
+			sleep(1);
 			exit_game();
             exit(0);
         }
@@ -45,7 +47,8 @@ void gui_menu_play_button(){
             menu_pressed_play_hold = true;
         }
         else if(menu_pressed_play_hold){
-            menu_pressed_play =true;
+			PlaySound(resources.sounds.press);
+            menu_pressed_play = true;
         }
         else{
             DrawTexturePro(resources.textures.gui.play_hover, (Rectangle){0, 0, 30, 20}, (Rectangle){360, 450, 150, 100}, (Vector2){75,50}, 0, WHITE);

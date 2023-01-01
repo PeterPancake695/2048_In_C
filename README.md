@@ -19,7 +19,7 @@
     mingw32-make.exe
 ```
 
-> linux / mac:
+> linux:
 
 ```bash
     # in root directory

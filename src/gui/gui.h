@@ -13,6 +13,7 @@ bool game_pressed_play = false;
 // prerequisite actions before exiting
 void exit_game(){
 	CloseWindow();
+	CloseAudioDevice();
     resource_all_unload();
 	file_save_write();
 	fclose(save);

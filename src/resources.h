@@ -1,7 +1,6 @@
 #pragma once
 #include "game.h"
 
-
 // Required Resources
 struct Resources{
     // Game Textures
@@ -56,6 +55,15 @@ struct Resources{
     struct Fonts{
         Font roboto;
     }fonts;
+	
+	// sounds
+	struct Sounds{
+		Sound merge;
+		Sound move;
+		Sound press;
+	}sounds;
+
+	Music music;
 }resources;
 
 // Loads tile textures
@@ -156,6 +164,20 @@ void resource_font_unload(){
     UnloadFont(resources.fonts.roboto);
 }
 
+// Loads sounds
+void resource_sounds_load(){
+	resources.sounds.merge = LoadSound("res/sounds/merge.wav");
+	resources.sounds.move = LoadSound("res/sounds/move.wav");
+	resources.sounds.press = LoadSound("res/sounds/press.wav");
+}
+
+// Unloads sounds
+void resource_sounds_unload(){
+	UnloadSound(resources.sounds.merge);
+	UnloadSound(resources.sounds.move);
+	UnloadSound(resources.sounds.press);
+}
+
 // Loads all textures
 void resource_texture_load(){
     resource_texture_misc_load();
@@ -176,10 +198,14 @@ void resource_texture_unload(){
 void resource_all_load(){
     resource_font_load();
     resource_texture_load();
+	resource_sounds_load();
+	resources.music = LoadMusicStream("res/sounds/music.mp3");
 }
 
 // Unloads all resources
 void resource_all_unload(){
     resource_font_unload();
     resource_texture_unload();
+	resource_sounds_unload();
+	UnloadMusicStream(resources.music);
 }
