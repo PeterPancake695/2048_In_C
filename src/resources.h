@@ -51,12 +51,12 @@ struct Resources{
 			Texture2D pause_normal;
         }gui;
     }textures;
+
 	// fonts
     struct Fonts{
         Font roboto;
     }fonts;
 }resources;
-
 
 // Loads tile textures
 void resource_texture_tile_load(){
@@ -119,7 +119,6 @@ void resource_texture_misc_unload(){
 }
 
 // Loads gui textures
-
 void resource_texture_gui_load(){
     resources.textures.gui.logo = LoadTexture("res/textures/gui/logo.png");
     resources.textures.gui.exit_clicked = LoadTexture("res/textures/gui/exit-clicked.png");
@@ -134,7 +133,6 @@ void resource_texture_gui_load(){
 }
 
 // Unloads gui textures
-
 void resource_texture_gui_unload(){
     UnloadTexture(resources.textures.gui.logo);
     UnloadTexture(resources.textures.gui.exit_clicked);

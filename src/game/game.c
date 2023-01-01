@@ -19,6 +19,7 @@ void keyPress(){
 void initGame(){
     drawTilePad();
 	printTable();
+	check_highscore();
 	game_draw_score();
 	if(gameLost == false && gameWon == false){
 		if(gamePaused == false){
