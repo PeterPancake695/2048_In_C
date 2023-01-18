@@ -26,7 +26,6 @@ void gui_menu_exit_button(){
         }
         else if(menu_pressed_exit){
 			PlaySound(resources.sounds.press);
-			sleep(1);
 			exit_game();
             exit(0);
         }

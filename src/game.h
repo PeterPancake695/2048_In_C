@@ -6,11 +6,6 @@
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
-#ifdef _WIN32
-	#include <windows.h>
-#else
-	#include <unistd.h>
-#endif
 
 // initializes variables
 #ifndef __GAME_H_
